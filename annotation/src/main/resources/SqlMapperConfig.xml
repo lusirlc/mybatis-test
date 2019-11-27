@@ -25,9 +25,9 @@
 	<!-- 配置映射文件的位置 -->
 	<mappers>
 		<!--如果是class或者package配置，那么需要是mapper配置文件的路径名和接口所在的路径名称一样，只不过配置文件以resources为根路径-->
-		<!--<mapper class="pers.luchuan.mybatis.start.dao.TestTbDao"/>-->
-		<!--<mapper class="pers.luchuan.mybatis.start.dao.TestTbDao2"/>-->
-		<package name="pers.luchuan.mybatis.start.dao"/>
+		<mapper class="pers.luchuan.mybatis.annotation.dao.TestTbDao"/>
+		<mapper class="pers.luchuan.mybatis.annotation.dao.TestTbDao2"/>
+		<!--<package name="pers.luchuan.mybatis.annotation.dao"/>-->
 		<!--resource必须指定具体的映射文件-->
 		<!--<mapper resource="mapper/TestTbMapper.xml"/>-->
 		<!--<mapper resource="mapper/TestTbMapper2.xml"/>-->
