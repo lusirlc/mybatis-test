@@ -1,13 +1,12 @@
-package pers.luchuan.mybatis.annotation.dao;
+package pers.luchuan.mybatis.analysis.dao;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
-import pers.luchuan.mybatis.annotation.dao.TestTbDao2;
-import pers.luchuan.mybatis.annotation.entity.TestTb;
-import pers.luchuan.mybatis.annotation.entity.TestTb2;
+import pers.luchuan.mybatis.analysis.entity.TestTb;
+import pers.luchuan.mybatis.analysis.service.impl.TestTbServiceImpl;
 
 import java.io.InputStream;
 import java.util.List;
@@ -25,15 +24,16 @@ public class TestTbDaoTest {
 		SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
 		SqlSessionFactory factory = builder.build(is);
 		//3.使用工厂创建SqlSession对象
-		SqlSession sqlSession = factory.openSession();
+//		SqlSession sqlSession = factory.openSession();
 		//4.使用sqlSession创建代理对象
-		TestTbDao mapper = sqlSession.getMapper(TestTbDao.class);
+//		TestTbDao mapper = sqlSession.getMapper(TestTbDao.class);
 //		TestTbDao2 mapper = sqlSession.getMapper(TestTbDao2.class);
-		List<TestTb> testTbs = mapper.selectAll();
+		TestTbServiceImpl testTbService = new TestTbServiceImpl(factory);
+		List<TestTb> testTbs = testTbService.selectAll();
 //		List<TestTb2> testTbs = mapper.selectAll();
 		System.out.println(testTbs);
 		//5.关闭资源
-		sqlSession.close();
+//		sqlSession.close();
 		is.close();
 	}
 }

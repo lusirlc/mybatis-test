@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="pers.luchuan.mybatis.design.dao.TestTbDao">
+	<select id="selectAll" resultType="pers.luchuan.mybatis.design.entity.TestTb">
+		SELECT * FROM test_tb
+	</select>
+</mapper>

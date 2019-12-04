@@ -22,7 +22,7 @@ public class TestTbDaoTest {
 	@Test
 	public void selectAll() throws Exception {
 		//1.加载mybatis主配置文件
-		InputStream is = Resources.getResourceAsStream("SqlMapperConfig.xml");
+		InputStream is = Resources.getResourceAsStream("SqlMapConfig.xml");
 		//2.创建SqlSessionFactory工厂
 		SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
 		SqlSessionFactory factory = builder.build(is);

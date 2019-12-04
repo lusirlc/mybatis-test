@@ -1,6 +1,5 @@
 package pers.luchuan.mybatis.start.dao;
 
-import pers.luchuan.mybatis.start.entity.TestTb;
 import pers.luchuan.mybatis.start.entity.TestTb2;
 
 import java.util.List;
